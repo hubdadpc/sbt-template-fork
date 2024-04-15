@@ -6,7 +6,7 @@ import { SbtItem } from "../wrappers/SbtItem";
 // ================================================================= //
 
 export async function run(provider: NetworkProvider) {
-    let collection_address = Address.parse("EQBLzYrl72T2vUJxR4Ju7OgXU8E4KeUOMcu8RrD5HAhi-vkn");
+    let collection_address = Address.parse("EQDkBV9wYZGmSyLd-k77ovFRiYWXIOr0esB6PB4L86alnBDv");
 
     let collection = provider.open(SbtCollection.fromAddress(collection_address));
 

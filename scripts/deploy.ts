@@ -16,7 +16,7 @@ export async function run(provider: NetworkProvider) {
     let collection = provider.open(await SbtCollection.fromInit(owner, newContent));
 
     // Do deploy
-    await collection.send(provider.sender(), {value: toNano("0.1")}, {$$type: 'RequestMint', index: 2n, owner_address: provider.sender().address!, authority_address: provider.sender().address!, content: beginCell().endCell()});
+    await collection.send(provider.sender(), {value: toNano("0.1")}, {$$type: 'Deploy', queryId: 0n});
 
     console.log(collection.address);
     // https://testnet.getgems.io/collection/EQBLzYrl72T2vUJxR4Ju7OgXU8E4KeUOMcu8RrD5HAhi-vkn

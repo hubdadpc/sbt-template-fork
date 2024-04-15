@@ -1,4 +1,5 @@
 import "./../sbt_item/sbt_item";
+import "@stdlib/deploy";
 
 message RequestMint {
     index: Int as uint64;
@@ -13,7 +14,7 @@ struct CollectionData {
     owner_address: Address;
 }
 
-contract SbtCollection {
+contract SbtCollection with Deployable {
     
     const minTonsForStorage: Int = ton("0.03");
 
