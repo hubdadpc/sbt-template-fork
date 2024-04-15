@@ -61,7 +61,7 @@ contract SbtCollection {
         b.append("meta.json"); // You can changed this your self. 
         return CollectionData{
             next_item_index: self.next_item_index, 
-            collection_content: self.collection_content,
+            collection_content: b.toCell(),
             owner_address: self.owner_address
         };
     }
