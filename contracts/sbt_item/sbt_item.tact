@@ -95,12 +95,6 @@ contract SbtItem {
         require(self.authority_address == sender(), "Invalid Sender");
         require(self.revoked_at == 0, "Already revoked");
         self.revoked_at = now();
-        send(SendParameters{
-            to: self.authority_address!!,
-            value: 0,
-            mode: SendRemainingValue,
-            body: Excesses{query_id: msg.query_id}.toCell()
-        });
     }
 
     receive(msg: TakeExcess) {
